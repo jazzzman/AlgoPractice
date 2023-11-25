@@ -6,7 +6,7 @@
   of the original integers also sorted in ascending order.
 
 
-  Time complexity
+  Time complexity O(n)
   Space complexity O(n)
 """
 import pytest
