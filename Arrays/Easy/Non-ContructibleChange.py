@@ -12,8 +12,8 @@
   coins, the minimum amount of change that you can't create is <span>1</span>.
 
 
-  Time complexity
-  Space complexity
+  Time complexity O(nlogn)
+  Space complexity O(1)
 """
 import pytest
 
