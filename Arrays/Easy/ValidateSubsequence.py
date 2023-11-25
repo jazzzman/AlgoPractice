@@ -9,8 +9,8 @@
   that a single number in an array and the array itself are both valid
   subsequences of the array.
 
-  Time complexity 
-  Space complexity
+  Time complexity O(n)
+  Space complexity O(1)
 """
 import pytest
 
