@@ -14,8 +14,8 @@
   difference.
 
 
-  Time complexity
-  Space complexity
+  Time complexity O(nlogn)
+  Space complexity O(1)
 """
 import pytest
 
