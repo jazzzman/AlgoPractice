@@ -11,8 +11,8 @@
   Note that you're expected to solve this problem without using division.
 
 
-  Time complexity O(###)
-  Space complexity O(###)
+  Time complexity O(n)
+  Space complexity O(n)
 """
 import pytest
 
