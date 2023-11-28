@@ -40,6 +40,7 @@ def sweetAndSavory(dishes, target):
     #      |      |      2
     #         |   |      4
     lPtr, rPtr = 0, len(dishes)-1
+    best_diff = float('inf')
     result = None
 
     while lPtr<rPtr and dishes[lPtr]<0 and dishes[rPtr]>0:
@@ -48,20 +49,16 @@ def sweetAndSavory(dishes, target):
         if current_dish == target:
             return [dishes[lPtr],dishes[rPtr]]
 
-        if target>0 and current_dish>target:
-            rPtr-=1
-        elif target>=0 and current_dish<target:
-            if result is None or current_dish>sum(result):
-                result = [dishes[lPtr],dishes[rPtr]]
-            lPtr+=1
-        else:
-            if (result is None or abs(target - current_dish)<abs(target-sum(result))) and current_dish<=0:
-                result = [dishes[lPtr],dishes[rPtr]]
-            if current_dish<target:
-                lPtr+=1
-            else:
-                rPtr-=1
+        if current_dish > target:
+            rPtr -= 1
+            continue
 
+        difference = target - current_dish
+        if difference <= best_diff:
+            best_diff = difference
+            result = [dishes[lPtr], dishes[rPtr]]
+
+        lPtr+=1
 
     return result if result else [0,0]
 
@@ -105,7 +102,6 @@ cases = [
     [[-12, 13, 100, -53, 540, -538, 53, 76, 32, -63], 42, [-12, 53]]
 ]
 
-@pytest.mark.skip(reason="My solution doesn't fit it' test cases, althought returns better solution. =(")
 @pytest.mark.parametrize("dishes, target, expected", cases)
 def test_sweetAndSavory(dishes, target, expected):
     assert sweetAndSavory(dishes, target)==expected
