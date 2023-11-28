@@ -13,8 +13,8 @@
   nodes can either be BinaryTree nodes themselves or
   None / null.
 
-  Time complexity O(###)
-  Space complexity O(###)
+  Time complexity O(n) - count of nodes
+  Space complexity O(h) - height of tree
 """
 import pytest
 
