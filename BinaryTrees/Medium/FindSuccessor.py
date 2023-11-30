@@ -20,12 +20,26 @@
   null.
 
 
-  Time complexity O(###)
-  Space complexity O(###)
+  Time complexity O(n) - n is count of nodes
+  Space complexity O(1)
 """
 import pytest
 
 
+
+def findSuccessor(tree,node):
+    if node.right:
+        node = node.right
+        while node.left is not None:
+            node = node.left
+        return {'nodeId':str(node.value)}
+    else:
+        while node.parent and node.parent.right and node.parent.right == node:
+            node = node.parent
+        if node.parent:
+            return {'nodeId':str(node.parent.value)}
+        else:
+            return None
 
 
 # Time Complexity O(n)
