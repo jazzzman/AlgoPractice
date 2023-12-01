@@ -15,8 +15,8 @@
   None / null.
 
 
-  Time complexity O(###)
-  Space complexity O(###)
+  Time complexity O(n) - n count of nodes
+  Space complexity O(1)
 """
 import pytest
 
