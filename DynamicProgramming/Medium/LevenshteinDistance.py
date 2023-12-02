@@ -9,8 +9,17 @@
   There are three edit operations: insertion of a character, deletion of a
   character, and substitution of a character for another.
 
-  Time complexity O(###)
-  Space complexity O(###)
+  Time complexity O(n*m)
+  Space complexity O(n*m) could be reduce to min(n,m)
+
+  idea is to create table with substrings starting with 0 to i.
+  header is substrings of str2 and index column is substrings of str1
+  to each str1 and str2 add space character. Cell shows how many editions
+  needs to turn substring of str1 to substring to str2. 
+  table fills according to rule:
+  if str1[r-1]==str2[c-1]: E[r][c] = E[r-1][c-1]
+  else: E[r][c] = 1 + min([E[r-1][c],E[r][c-1],E[r-1][c-1]])
+  Bottom right cell is an answer
 """
 import pytest
 
