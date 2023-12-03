@@ -164,7 +164,8 @@ cython_debug/
 pytest.ini
 
 # specific files
-__grab_cases.py
-__html.txt
+__grab_html.py
+__html_prompt.txt
+__html_cases.txt
 PROBLEM_TEMPLATE.py
 
