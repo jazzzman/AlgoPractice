@@ -32,7 +32,7 @@
   total speed of these tandem bicycles is 4 + 5 = 9.
 
 
-  Time complexity O(n)
+  Time complexity O(nlogn)
   Space complexity O(n)
 """
 import pytest

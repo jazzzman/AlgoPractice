@@ -24,7 +24,7 @@
   Note: you can assume that each class has at least 2 students.
 
 
-  Time complexity O(n)
+  Time complexity O(nlogn)
   Space complexity O(n)
 """
 import pytest

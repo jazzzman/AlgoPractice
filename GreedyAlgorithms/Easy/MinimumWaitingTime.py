@@ -27,8 +27,8 @@
   Note: you're allowed to mutate the input array.
 
 
-  Time complexity O(###)
-  Space complexity O(###)
+  Time complexity O(nlogn)
+  Space complexity O(1)
 """
 import pytest
 
