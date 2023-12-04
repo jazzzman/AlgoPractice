@@ -52,11 +52,12 @@
   associations.
 
 
-  Time complexity O(###)
-  Space complexity O(###)
+  Time complexity O(4^n*n)
+  Space complexity O(4^n*n)
 """
 import pytest
 from icecream import ic
+
 
 DIG_CHR = {str(k+2):[chr(ord('a')+3*k+j) for j in range(0,3)] for k in range(0,5) }
 DIG_CHR['7'] = list('pqrs')
@@ -67,11 +68,6 @@ DIG_CHR['1'] = ['1']
 
 
 def phoneNumberMnemonics(phoneNumber):
-
-    result = helper(phoneNumber)
-    return result
-
-def helper(phoneNumber):
     if len(phoneNumber)==0:
         return []
     elif len(phoneNumber)==1:
@@ -79,7 +75,7 @@ def helper(phoneNumber):
 
     result = []
     for ch in DIG_CHR[phoneNumber[0]]:
-        sub = helper(phoneNumber[1:])
+        sub = phoneNumberMnemonics(phoneNumber[1:])
         result += [ch+s for s in sub]
 
     return result
