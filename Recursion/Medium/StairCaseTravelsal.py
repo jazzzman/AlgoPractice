@@ -14,13 +14,31 @@
 
   Note that maxSteps <= height will always be true.
 
-  Time complexity O(###)
-  Space complexity O(###)
+  Time complexity O(n*maxSteps)
+  Space complexity O(n)
 """
 import pytest
 
 
+# Better time complexity O(n)
+# Space complexity O(n)
 def staircaseTraversal(height, maxSteps):
+    currentNumberOfWays = 0
+    ways = [1]
+    for step in range(1, height+1):
+        startWindow = step-maxSteps-1
+        if startWindow>=0:
+            currentNumberOfWays -= ways[startWindow]
+
+        currentNumberOfWays += ways[-1]
+        ways.append(currentNumberOfWays)
+        
+    return ways[-1]
+        
+
+
+
+def staircaseTraversal_v2(height, maxSteps):
     steps = [0]*(height+1)
     steps[0]=1
 
