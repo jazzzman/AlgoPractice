@@ -12,8 +12,8 @@
 
   Note that the sets in the powerset do not need to be in any particular order.
 
-  Time complexity O(###)
-  Space complexity O(###)
+  Time complexity O(n*2^n)
+  Space complexity O(n*2^n)
 """
 import pytest
 
