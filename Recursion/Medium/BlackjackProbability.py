@@ -35,7 +35,7 @@
     rounded to 0.134.
 
 
-  Time complexity O(target-startingHand*11)
+  Time complexity O(target-startingHand)
   Space complexity O(target-startingHand)
 """
 import pytest
