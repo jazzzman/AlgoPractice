@@ -23,8 +23,8 @@
 
 
 
-  Time complexity O(###)
-  Space complexity O(###)
+  Time complexity O(n)
+  Space complexity O(n)
 """
 import pytest
 
