@@ -22,8 +22,8 @@
   Important note: the indices in the ouput array should be sorted in ascending
   order.
 
-  Time complexity O(###)
-  Space complexity O(###)
+  Time complexity O(n)
+  Space complexity O(n)
 """
 import pytest
 
