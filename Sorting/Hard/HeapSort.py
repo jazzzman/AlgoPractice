@@ -9,8 +9,8 @@
   Overview section of this question's video explanation before starting to code.
 
 
-  Time complexity O(###)
-  Space complexity O(###)
+  Time complexity O(nlogn)
+  Space complexity O(1)
 """
 import pytest
 
