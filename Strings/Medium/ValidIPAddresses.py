@@ -29,8 +29,8 @@
   about IP addresses!
 
 
-  Time complexity O(###)
-  Space complexity O(###)
+  Time complexity O(1)
+  Space complexity O(1)
 """
 import pytest
 
