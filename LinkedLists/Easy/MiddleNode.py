@@ -77,18 +77,18 @@ cases = [
 ]
 
 @pytest.mark.parametrize("linkedList, expected", cases)
-def test_middleNode(linkedList, expected):
-    nodes = {node['id']:LinkedList(node['id'],node['value']) for node in linkedList['nodes']}
-    for node in linkedList['nodes']:
-        nodes[node['id']].next = nodes.get(node['next'],None)
+def test_middlenode(linkedlist, expected):
+    nodes = {node['id']:linkedlist(node['id'],node['value']) for node in linkedlist['nodes']}
+    for node in linkedlist['nodes']:
+        nodes[node['id']].next = nodes.get(node['next'],none)
 
     candidate = []
-    node = middleNode(nodes[linkedList['head']])
+    node = middlenode(nodes[linkedlist['head']])
     ic(node)
     while node:
         candidate.append({
             'id': node.id,
-            'next': node.next.id if node.next else None,
+            'next': node.next.id if node.next else none,
             'value': node.value
             })
         node = node.next

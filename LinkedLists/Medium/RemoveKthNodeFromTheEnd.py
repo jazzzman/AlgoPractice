@@ -27,8 +27,8 @@ Note that your function doesn't need to return anything.
 
 
 
-  Time complexity O(###)
-  Space complexity O(###)
+  Time complexity O(n)
+  Space complexity O(1)
 """
 import pytest
 
