@@ -25,8 +25,8 @@ r"""
     I   J   K
     ["A", "B", "E", "F", "I", "J", "C", "D", "G", "K", "H"]
 
-  Time complexity O(###)
-  Space complexity O(###)
+  Time complexity O(V+E)
+  Space complexity O(V)
 """
 import pytest
 
